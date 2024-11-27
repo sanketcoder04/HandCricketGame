@@ -1,277 +1,104 @@
-* {
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    font-weight: bold;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 30px;
-}
-
-.head {
-    height: 100px;
-    color: #e0e1dd;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #0d1b2a;
+    background-color: #f5f5f5;
+    color: #333;
     text-align: center;
-    line-height: 100px;
-    font-size: 70px;
 }
 
-.head i,
-.head h1 {
-    padding: 15px;
+h1 {
+    font-size: 2rem;
+    margin: 20px 0;
+    color: #333;
 }
 
-.toss,
-.options {
-    height: 80vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    word-wrap: normal;
-    background-color: #e0e1dd;
-}
-
-.options {
-    display: none;
-}
-
-.toss-option,
-.bat-bowl-option {
-    height: auto;
-    width: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.head-tail,
-.bat-bowl {
-    height: 40px;
-    border: 3px solid #0d1b2a;
-    color: #e0e1dd;
-    background-color: #0d1b2a;
+/* Game Container */
+.game-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
     border-radius: 10px;
-    width: 120px;
-    text-align: center;
-    line-height: 40px;
-    margin-left: 30px;
-    margin-right: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.head-tail:hover,
-.bat-bowl:hover {
-    background-color: #e0e1dd;
-    color: #0d1b2a;
-    cursor: pointer;
-}
-
-.options h2 {
-    color: green;
-}
-
-.computer-win-toss {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: red;
-    height: 70vh;
-    width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: #e0e1dd;
-}
-
-.play-start {
-    height: 40px;
-    border: 3px solid #0d1b2a;
-    color: #e0e1dd;
-    background-color: #0d1b2a;
-    border-radius: 10px;
-    width: 200px;
-    text-align: center;
-    line-height: 40px;
-    margin-top: 30px;
-}
-
-.play-start:hover {
-    background-color: #e0e1dd;
-    color: #0d1b2a;
-    cursor: pointer;
-}
-
-.playground {
-    background-color: #0d1b2a;
-    height: auto;
-    width: 100vw;
-    display: none;
-    flex-direction: column;
-    align-items: center;
-}
-
-.hand {
-    height: 60vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* border: 2px solid yellow; */
-    background-color: #0d1b2a;
-    color: #e0e1dd;
-    /* border-radius: 10px; */
-}
-
-.computer-side,
-.user-side {
-    height: 250px;
-    width: 100px;
-    /* border: 2px solid orange; */
-    display: flex;
-    justify-content: center;
-    flex: 1;
-    align-items: center;
-    flex-direction: column;
-}
-
-.computer-hand img,
-.user-hand img{
-    height: 180px;
-    width: 180px;
-    margin-bottom: 10px;
-    border: 2px solid black;
-    border-radius: 50%;
-    /* background-image: url("0.jpg"); */
-    background-size: cover;
-}
-
-.keypad {
-    height: 150px;
-    width: 100%;
-    /* border: 2px solid red; */
+/* Scoreboard */
+.scoreboard {
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    background-color: #0d1b2a;
+    margin: 20px 0;
+    flex-wrap: wrap; /* Ensures wrapping on smaller screens */
 }
 
-.key {
-    height: 60px;
-    width: 80px;
-    font-weight: bolder;
-    text-align: center;
-    line-height: 60px;
-    border: 4px solid #e0e1dd;
-    color: #e0e1dd;
-    border-radius: 10px;
+.score {
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+    background: #e3f2fd;
+    border: 1px solid #90caf9;
+    border-radius: 5px;
 }
 
-.key:hover {
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin: 10px;
+    background: #42a5f5;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    color: #0d1b2a;
-    background-color: #e0e1dd;
+    transition: background 0.3s ease;
 }
 
-.scorecard{
-    height: 80px;
-    width: 600px;
-    background-color: #e0e1dd;
-    color: #0d1b2a;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    gap: 5px;
-}
-.batter{
-    height: 80px;
-    width: 300px;
-    /* border: 2px solid red;  */
-    font-size: 50px;
-    text-align: center; 
-    line-height: 80px; 
-}
-.runs{
-    height: 70px;
-    width: 150px;
-    /* border: 2px solid red;  */
-    font-size: 50px;
-    text-align: end; 
-    line-height: 70px; 
-    background-color: #0d1b2a;
-    color: #e0e1dd;
-    border: 2px solid #0d1b2a;
-    border-radius: 10px;
-    padding-right: 10px;
-}
-.wickets{
-    height: 70px;
-    width: 80px;
-    /* border: 2px solid red; */
-    font-size: 50px; 
-    text-align: center; 
-    line-height: 70px;
-    background-color: #0d1b2a;
-    color: #e0e1dd;
-    border: 2px solid #0d1b2a;
-    border-radius: 10px;
-}
-.balls{
-    height: 80px;
-    width: 50px;
-    /* border: 2px solid red;   */
-    font-size: 20px;
-    text-align: end;
-    line-height: 80px;
-    padding-right: 5px;
+.button:hover {
+    background: #1e88e5;
 }
 
-
-
-
-.message {
-    height: 80px;
-    width: 1000px;
-    overflow: auto;
-    background-color: #e0e1dd;
-    color: #0d1b2a;
-    border: 3px solid #e0e1dd;
-    border-radius: 10px;
-    text-align: center;
-    line-height: 80px;
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
 }
 
-.new-btn-content {
-    height: 100px;
-    width: 100%;
-    background-color: #0d1b2a;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* border: 2px solid yellow; */
+/* Responsive Design */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .score {
+        margin: 5px;
+    }
 }
 
-.new-btn {
-    background-color: #e0e1dd;
-    border: 3px solid #e0e1dd;
-    color: #0d1b2a;
-    height: 50px;
-    width: 150px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem;
+    }
 
-.new-btn:hover {
-    background-color: #0d1b2a;
-    color: #e0e1dd;
-    cursor: pointer;
+    .game-container {
+        padding: 10px;
+    }
+
+    .scoreboard {
+        flex-direction: column; /* Stack scores vertically */
+    }
+
+    .button {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
 }
